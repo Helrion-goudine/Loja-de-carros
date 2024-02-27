@@ -7,15 +7,19 @@
     
 
 .cards{
-    display: flex;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr) ; 
     justify-content: space-around;
+    row-gap: 50PX;
 
 }   
 
 .card{
     background-color: #fff;
     color: #212121;
-    width:  100px;
+    width:  130px;
+    height: 90%;
     text-align: center;
     font-size: 18px;
     font-weight: 100;
@@ -100,14 +104,26 @@
 
 }
 
+@media (max-width: 1900px) {
+
+    .cards{
+        display: grid;
+        grid-template-columns: 70px 70px 70px 70px 70px 70px 70px 80px 100px;
+        justify-content: space-around;
+        row-gap: 20PX;
+       
+    }
+
+}
 
 @media (max-width: 1400px) {
 
     .cards{
         display: grid;
-        grid-template-columns: 70px 70px 70px 70px 70px 70px 70px 70px 70px 90px;
+        grid-template-columns: 80px 80px 70px 70px 80px 90px 90px ;
         justify-content: space-around;
         row-gap: 20PX;
+        margin-right: 30px;
        
     }
 
@@ -163,9 +179,29 @@
 
 @media (max-width: 600px) {
 
+    .aplogos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        justify-content: space-between;
+        gap: 50px;
+        margin: 20px;
+    }
+
+    .tcarros{
+        text-align: center;
+    }
+    
+
+}
+
+@media (max-width: 600px) {
+
     .cards{
         display: grid;
-        grid-template-columns: 70px 70px 70px  ;
+        grid-template-columns: 70px 70px;
         justify-content: space-around;
         row-gap: 20PX;
        

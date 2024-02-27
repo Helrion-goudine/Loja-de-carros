@@ -1,6 +1,6 @@
 #carros{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .card-carro{
@@ -17,13 +17,12 @@
     }
 
     & .especificacoes{
-        font-size: 1+px;
+        font-size: 10px;
         color: #000000;
         margin-left: 5px;
     }
 
     & .valor{
-        margin-top: 10px;
         background-color: #000;
         color: #ffffff;
         font-size: 20px;
@@ -97,11 +96,13 @@
     padding: 10px;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 1900px) {
     #carros{
-        width: 500px;
-        align-items: center;
-        flex-direction: column;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
     }
 
     .card-carro{
@@ -118,7 +119,70 @@
         }
     
         & .especificacoes{
-            font-size: 1+px;
+            font-size: 10px;
+            color: #000000;
+            margin-left: 5px;
+        }
+
+    
+        & .valor{
+            margin-top: 10px;
+            background-color: #000;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+}
+
+@media (max-width: 1400px){
+    #carros{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;     
+    }
+}
+
+@media (max-width: 1000px) {
+    #carros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr); 
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    #carros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr); 
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    #carros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr); 
+        gap: 20px;
+    }
+
+    .card-carro{
+        margin: 50px;
+        border: 3px groove #fff;
+        border-radius: 5px;
+        
+        background-color: #ffffff;
+        cursor: pointer;
+    
+        & .IMG-CARRO img{
+            width: 100%;
+            border-radius: 5px;
+        }
+    
+        & .especificacoes{
+            font-size: 10px;
             color: #000000;
             margin-left: 5px;
         }
@@ -131,5 +195,13 @@
             padding: 5px;
             border-radius: 5px;
         }
+    }
+}
+@media (max-width: 750px) {
+    #carros{
+        display: grid;
+        margin-left: 10%;
+        grid-template-columns: repeat(1,1fr); 
+        gap: 20px;
     }
 }
